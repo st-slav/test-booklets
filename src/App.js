@@ -9,8 +9,8 @@ const App = () => (
   <Layout>
     <Router history={history}>
       <Switch>
-        <Route path="/" component={Animals} />
-        <Route path="/animal/:id" component={Animal} />
+        <Route exact path="/" component={Animals} />
+        <Route exact path="/animal/:id" component={Animal} />
       </Switch>
     </Router>
   </Layout>

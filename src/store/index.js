@@ -1,6 +1,6 @@
 import { createBrowserHistory } from "history";
 import configureStore from "./configureStore";
-import animals from "./modules/animals";
+import { animals } from "./modules/animals";
 
 export const history = createBrowserHistory({ basename: "/" });
 

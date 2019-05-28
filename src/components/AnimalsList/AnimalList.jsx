@@ -9,7 +9,7 @@ const AnimalsListLi = styled.li`
 
 export const AnimalsList = ({ animals = [] }) => (
   <ul>
-    {animals.map(({ label, link }) => (<AnimalsListLi><NavLink  to={link}>{label}</NavLink ></AnimalsListLi>))}
+    {animals.map(({ label, link }) => (<AnimalsListLi key={link + label}><NavLink  to={link}>{label}</NavLink ></AnimalsListLi>))}
   </ul>
 )
 

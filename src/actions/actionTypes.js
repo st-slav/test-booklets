@@ -1,0 +1,6 @@
+export const actionTypes = {
+  // animals
+  GET_ANIMALS: 'GET_ANIMALS',
+  GET_ANIMALS_SUCCESS: 'GET_ANIMALS_SUCCESS',
+  GET_ANIMALS_FAILURE: 'GET_ANIMALS_FAILURE'
+}
