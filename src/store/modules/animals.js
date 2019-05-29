@@ -3,7 +3,7 @@ import { actionTypes } from '../../actions/actionTypes'
 
 const listReducer = (state = {}, action) => {
   switch (action.type) {
-    case actionTypes.GET_ANIMALS_SUCCESS:
+    case actionTypes.LOAD_ANIMALS_SUCCESS:
       return action.payload
 
     default:
@@ -13,11 +13,11 @@ const listReducer = (state = {}, action) => {
 
 const isLoadingReducer = (state = false, action) => {
   switch (action.type) {
-    case actionTypes.GET_ANIMALS:
+    case actionTypes.LOAD_ANIMALS:
       return true
 
-    case actionTypes.GET_ANIMALS_SUCCESS:
-    case actionTypes.GET_ANIMALS_FAILURE:
+    case actionTypes.LOAD_ANIMALS_SUCCESS:
+    case actionTypes.LOAD_ANIMALS_FAILURE:
       return false
 
     default:
@@ -29,10 +29,10 @@ const errorInitialState = null
 
 const errorReducer = (state = errorInitialState, action) => {
   switch (action.type) {
-    case actionTypes.GET_ANIMALS_FAILURE:
+    case actionTypes.LOAD_ANIMALS_FAILURE:
       return action.payload
 
-    case actionTypes.GET_ANIMALS_START:
+    case actionTypes.GET_ANIMALS:
       return errorInitialState
 
     default:

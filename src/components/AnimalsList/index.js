@@ -1,1 +1,1 @@
-export { AnimalList } from './AnimalList'
+export { AnimalsList } from './AnimalsList'
