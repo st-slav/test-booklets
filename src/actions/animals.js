@@ -1,4 +1,4 @@
-import { actionTypes } from './actionTypes'
+import { actionTypes } from '../constants'
 import { api } from '../api'
 
 export const loadAnimals = () => async (dispatch) => {

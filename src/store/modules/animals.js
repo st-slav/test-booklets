@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
-import { actionTypes } from '../../actions/actionTypes'
+import { actionTypes } from '../../constants'
 
-const listReducer = (state = {}, action) => {
+const listReducer = (state = [], action) => {
   switch (action.type) {
     case actionTypes.LOAD_ANIMALS_SUCCESS:
       return action.payload

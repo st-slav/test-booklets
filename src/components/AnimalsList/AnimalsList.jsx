@@ -1,16 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { NavLink  } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import styled from 'styled-components'
 
 const AnimalsListLi = styled.li`
-  padding: 10px 15px;
+  padding-bottom: 5px;
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+  }
+`
+
+const AnimalsListUl = styled.ul`
+  padding: 0;
+  list-style: none;
 `
 
 export const AnimalsList = ({ animals = [] }) => (
-  <ul>
-    {animals.map(({ label, link }) => (<AnimalsListLi key={link + label}><NavLink  to={link}>{label}</NavLink ></AnimalsListLi>))}
-  </ul>
+  <AnimalsListUl>
+    {animals.map(({ label, link }) => (<AnimalsListLi key={link + label}><Link  to={link}>{label}</Link ></AnimalsListLi>))}
+  </AnimalsListUl>
 )
 
 AnimalsList.propTypes = {
