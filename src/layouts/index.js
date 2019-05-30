@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import { styles } from '../constants'
 
 const layout = `
-  width: 1170px;
+  max-width: ${styles.LAYOUT_WIDTH}px;
+  min-width: ${styles.LAYOUT_MIN_WIDTH}px;
+  width: 100%;
   margin: 0 auto;
   color: #07001F;
   font-family: sans-serif;
@@ -23,11 +25,11 @@ const LayoutFooter = styled.footer`
   }
 `
 export const LayoutHr = styled.hr`
+  min-width: ${styles.LAYOUT_MIN_WIDTH}px;
   height: 1px; 
   overflow: hidden;
   background-color: ${styles.HR_COLOR};
   border: none;
-  width: 100%;
   margin: 0;
 `
 
