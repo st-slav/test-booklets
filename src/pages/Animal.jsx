@@ -1,6 +1,12 @@
 import React from "react";
-import { Animal as AnimalContainer } from '../containers'
+import { Animal as AnimalContainer, FoodSelect } from '../containers'
 
-const Animal = () => <AnimalContainer />
+
+const Animal = () => (
+  <section>
+    <AnimalContainer />
+    <FoodSelect />
+  </section>
+)
 
 export default Animal;
